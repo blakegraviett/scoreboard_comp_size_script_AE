@@ -1,20 +1,20 @@
 // * UI
 
-let composition = app.project.activeItem;
+const composition = app.project.activeItem
 
 // ? Make a Window for the buttons
-let myWindow = new Window("palette", "Comp Size", undefined);
+const myWindow = new Window("palette", "Comp Size", undefined);
 myWindow.orientation = 'column';
 
 // ? Add text saying what the window is
-let windowText = myWindow.add('statictext', undefined, 'Scoreboard Comp Sizes');
+const windowText = myWindow.add('statictext', undefined, 'Scoreboard Comp Sizes');
 
 // ? Button Group
-let compSizeButtonGroup = myWindow.add('group', undefined, '');
+const compSizeButtonGroup = myWindow.add('group', undefined, '');
 compSizeButtonGroup.orientation = 'row';
 
 // todo Button one change a composition size to make a comp 1920 x 1080 px
-let mainBoardButton = compSizeButtonGroup.add('button', undefined, 'Main Board Size');
+const mainBoardButton = compSizeButtonGroup.add('button', undefined, 'Main Board Size');
 mainBoardButton.onClick = function() {
     if(composition.height !== 1080 && composition.width !== 1920) {
         changeCompSize();
@@ -22,7 +22,7 @@ mainBoardButton.onClick = function() {
 }
 
 // todod Button two change a composition size to make a comp 3072 x 256 px 
-let ribbonBoardButton = compSizeButtonGroup.add('button', undefined, 'Ribbon Board Size');
+const ribbonBoardButton = compSizeButtonGroup.add('button', undefined, 'Ribbon Board Size');
 ribbonBoardButton.onClick = function() {
     if(composition.height !== 256 && composition.width !== 3072) {
     changeCompSize();
